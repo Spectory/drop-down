@@ -1,0 +1,65 @@
+$dark-blue: #344563;
+$light-blue: #5db8f1;
+
+$dd-height: 20px;
+$dd-width: 180px;
+$dd-border: 2px;
+
+drop-down{
+  position: relative;
+  color: $dark-blue;
+  height: $dd-height;
+  width: $dd-width;
+  display: inline-block;
+
+  .dd-box{
+    height: 100%;
+    text-align: left;
+
+    .arrow-down-container{
+      display: inline-block;
+      height: $dd-height;
+      width: $dd-height;
+      float: right;
+
+      .arrow-down{
+        padding-left: $dd-border;
+        background-image: image-url('dd_arrow.png');
+        background-size: 13.5px 8px;
+      }
+    }
+  }
+
+  .openable{
+    border: $dd-border solid $light-blue;
+
+    .arrow-down-container{
+      background-color: $light-blue;
+    }
+  }
+
+  .unopenable{
+    border: $dd-border solid $border-grey;
+
+    .arrow-down-container{
+      background-color: $border-grey;
+    }
+  }
+
+  .options-container{
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+
+    .option{
+
+      background-color: grey;
+      color: white;
+      padding: 10px;
+
+      &:hover{
+        background-color: $light-blue;
+      }
+    }
+  }
+}
